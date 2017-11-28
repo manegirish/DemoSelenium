@@ -32,25 +32,22 @@ public class FindBrokenLinksExample {
 	public void validateInvalidLinks() {
 		try {
 			List<WebElement> anchorTagsList = driver.findElements(By.tagName("a"));
-			//WebElement webElement = anchorTagsList.get(0);
 			int row_number = 0;
-			for (WebElement anchorTagElement : anchorTagsList) {
+			for (WebElement webElement : anchorTagsList) {
 				ArrayList<String> dataList = new ArrayList<String>();
-				if (anchorTagElement != null) {
-					String url = anchorTagElement.getAttribute("href");
+				if (webElement != null) {
+					String url = webElement.getAttribute("href");
 					int statusCode = 0;
 					dataList.add(""+(row_number+1));
 					dataList.add(url);
-					dataList.add(anchorTagElement.getTagName());
+					dataList.add(webElement.getTagName());
 					if (url != null && !url.contains("javascript")) {
 						statusCode = verifyURLStatus(url);
 						dataList.add(""+statusCode);
 					} else {					
 						dataList.add(""+statusCode);
-						/*System.out.println("Url: " + url+"\nTag: "+anchorTagElement.getTagName()
-						+" Class: "+anchorTagElement.getAttribute("outerHtml")+"\nLocation: "+anchorTagElement.getLocation());*/
 					}
-					dataList.add(anchorTagElement.getAttribute("outerHTML"));
+					dataList.add(webElement.getAttribute("outerHTML"));
 					if (statusCode==200) {
 						dataList.add("PASS");
 					}else {
@@ -85,10 +82,6 @@ public class FindBrokenLinksExample {
 		try {
 			HttpResponse response = client.execute(request);
 			return response.getStatusLine().getStatusCode();
-			/*if (response.getStatusLine().getStatusCode() != 200) {
-				System.out.println("Url: " + URL + "\nStatusCode: " + response.getStatusLine().getStatusCode()+"\n\n");
-				invalidLinksCount++;
-			}*/
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
