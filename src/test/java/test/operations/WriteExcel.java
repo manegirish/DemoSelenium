@@ -17,12 +17,17 @@ public class WriteExcel {
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
 		XSSFSheet sheet = workbook.getSheet(book_name);
 		Row row = sheet.getRow(row_number);
+		if (row==null) {
+			row = sheet.createRow(row_number);
+		}
 		Cell cell = row.getCell(coloumn);
+		if (cell==null) {
+			cell = row.createCell(coloumn);
+		}
 		cell.setCellType(Cell.CELL_TYPE_STRING);
 		cell.setCellValue(value);
 		FileOutputStream fos = new FileOutputStream(path);
 		workbook.write(fos);
 		fos.close();
-		System.out.println("END OF WRITING DATA IN EXCEL");
 	}
 }

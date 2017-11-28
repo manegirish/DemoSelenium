@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.main.TestMain">
+      <class name="test.operations.FindBrokenLinksExample">
         <methods>
-          <include name="Blogs"/>
+          <include name="tearDown"/>
+          <include name="validateInvalidLinks"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- test.main.TestMain -->
+      </class> <!-- test.operations.FindBrokenLinksExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

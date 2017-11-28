@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="24108" started-at="2017-11-23T13:49:34Z" finished-at="2017-11-23T13:49:58Z">
+  <suite name="Default suite" duration-ms="64954" started-at="2017-11-28T13:03:02Z" finished-at="2017-11-28T13:04:07Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="24108" started-at="2017-11-23T13:49:34Z" finished-at="2017-11-23T13:49:58Z">
-      <class name="test.main.TestMain">
-        <test-method status="PASS" signature="LinkedInLogin()[pri:0, instance:test.main.TestMain@cc285f4]" name="LinkedInLogin" duration-ms="24081" started-at="2017-11-23T19:19:34Z" finished-at="2017-11-23T19:19:58Z">
+    <test name="Default test" duration-ms="64954" started-at="2017-11-28T13:03:02Z" finished-at="2017-11-28T13:04:07Z">
+      <class name="test.operations.FindBrokenLinksExample">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.operations.FindBrokenLinksExample@5e3a8624]" name="setUp" is-config="true" duration-ms="12885" started-at="2017-11-28T18:33:02Z" finished-at="2017-11-28T18:33:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LinkedInLogin -->
-      </class> <!-- test.main.TestMain -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="validateInvalidLinks()[pri:0, instance:test.operations.FindBrokenLinksExample@5e3a8624]" name="validateInvalidLinks" duration-ms="51473" started-at="2017-11-28T18:33:15Z" finished-at="2017-11-28T18:34:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateInvalidLinks -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:test.operations.FindBrokenLinksExample@5e3a8624]" name="tearDown" is-config="true" duration-ms="573" started-at="2017-11-28T18:34:06Z" finished-at="2017-11-28T18:34:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.operations.FindBrokenLinksExample -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
